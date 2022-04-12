@@ -176,8 +176,8 @@ header ul > li:last-of-type form {
 
 main > div:first-child{
     background-color: red;
-    /* height: calc(100vh - 6.75rem); */
-    height: 100vh;
+    height: calc(100vh - 6.75rem);
+    /* height: 100vh; */
     background: url(../img/blue-space-md.webp) center / cover no-repeat;
     padding: 0rem 0.75rem;
     display: flex;
@@ -221,7 +221,11 @@ footer a {
 .our-work {
     border: 3px solid var(--seafoam-green);
     border-radius: 5px;
-    margin-top: -7rem;
+    margin-top: -5rem;
+    /* margin: auto; */
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 18.5rem;
 }
 
 .together {
@@ -249,13 +253,14 @@ footer a {
     color: var(--lt-seafoam-green);
 }
 
-.our-work {
-    margin-top: -9rem;
+.together {
+    margin-top: -10rem;
 }
 
 .button {
     display: flex;
     height: 4rem;
+    max-width: 18.75rem;
 }
 
 .button a {
@@ -293,11 +298,17 @@ main > div:nth-child(2) p {
     padding-top: 15rem;
 }
 
-.card-wrapper .card:first-child .card-banner {
+.card-wrapper:nth-child(1) .card:first-child .card-banner,
+.card-wrapper:nth-child(2) .card:nth-child(2) .card-banner,
+.card-wrapper:nth-child(3) .card:first-child .card-banner,
+.card-wrapper:nth-child(4) .card:nth-child(2) .card-banner {
     background-color: var(--md-blue);
 }
 
-.card-wrapper .card:nth-child(2) .card-banner {
+.card-wrapper:nth-child(1) .card:nth-child(2) .card-banner,
+.card-wrapper:nth-child(2) .card:nth-child(1) .card-banner,
+.card-wrapper:nth-child(3) .card:nth-child(2) .card-banner,
+.card-wrapper:nth-child(4) .card:nth-child(1) .card-banner {
     background-color: var(--seafoam-green);   
 }
 
@@ -379,7 +390,8 @@ main > div:nth-child(4) {
     height: 5rem;
     border: 3px solid var(--md-blue);
     border-radius: 5px;
-
+    margin: auto;
+    max-width: 25rem;
 }
 
 .button-arrow a {
@@ -522,5 +534,202 @@ footer > div:last-child {
     padding: 0.75rem 0.75rem 0rem 0.75rem;
 }
 
+footer > div:nth-child(2) p {
+    max-width: 30ch;
+}
 
+@media screen and (min-width:47.5rem){
+    header > div,
+    main > div:nth-child(1),
+    main > div:nth-child(2),
+    main > div:nth-child(n+4),
+    footer > div:nth-child(1),
+    footer > div:nth-child(2){
+        padding-left: 2rem;
+        padding-right: 2rem;
+        /* background-color: red; */
+    }
 
+    main > div:first-child {
+        background-image: url(../img/blue-space-md.webp);
+        justify-content: space-evenly;
+    }
+
+    main >div > div:first-child h2 {
+        font-size: 4rem;
+        width: 75%;
+    }
+
+    main >div > div:first-child {
+        background-repeat: no-repeat;
+    }
+
+    main > div:nth-child(1) > div:nth-child(2) {
+        display: flex;
+        /* flex-wrap: wrap-reverse; */
+        flex-direction: row-reverse;
+        /* flex-wrap: wrap; */
+        justify-content: flex-end;
+    }
+
+    .together {
+        min-width: 18.75rem;
+        max-width: 18.75rem;
+        /* display: flex; */
+        margin: 0%;
+    }
+
+    .our-work {
+        min-width: 14rem;
+        max-width: 14rem;
+        margin: 0%;
+        margin-left: 2rem;
+    }
+
+    main > div:nth-child(4) .button-arrow {
+        margin-left: 50%;
+        margin-right: auto;
+    }
+
+    main > div:nth-child(5) .button-arrow {
+        margin-left: 0%;
+        margin-right: auto;
+    }
+
+    .we-do > div:nth-child(2) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .we-do > div:nth-child(2) > div {
+        flex-grow: 1;
+        width: 45%;
+    }
+
+    main > div:last-child {
+        background: url(../img/contact-banner-sm.webp) center / cover no-repeat;
+    }
+
+    footer > div:nth-child(1){
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    footer > div:nth-child(1) h2 {
+        width: 100%;
+    }
+
+    footer > div:nth-child(1) > div {
+        width: 50%;
+        margin-bottom: 2rem;
+    }
+
+    footer > div:nth-child(2) {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    footer > div:nth-child(2) p {
+        max-width: unset;
+    }
+}
+
+@media screen and (min-width: 75rem) {
+    header > div,
+    header > nav,
+    main > div:nth-child(1),
+    main > div:nth-child(2),
+    main > div:nth-child(n+4),
+    footer > div:nth-child(1),
+    footer > div:nth-child(2){
+        padding-left: 3.375rem;
+        padding-right: 3.375rem;
+        /* background-color: yellow; */
+    }
+
+    .toggle-btn {
+        display: none;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    header {
+        display: flex;
+        /* width: 100vw; */
+        /* background-color: red; */
+    }
+
+    header > .shadow {
+        box-shadow: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    header > nav  {
+        opacity: 1;
+        visibility: visible;
+        display: block;
+    }
+
+    header > nav{
+        position: relative;
+        /* width: 100%; */
+        /* padding-right: 2rem; */
+    }
+
+    nav > ul {
+        display: flex;
+        /* align-items: flex-end; */
+        justify-content: end;
+    }
+
+    header nav ul li a{
+        font-size: 1.25rem;
+    }
+
+    header li:nth-child(n+2) {
+        border: none;
+    }
+
+    header li:last-child input{
+        background-color: red;
+        max-width: 16rem;
+    }
+
+    header > div > a > img{
+        max-height: 4rem;
+        min-height: 4rem;
+    }
+
+    .glass {
+        width: 1.5rem;
+        height: 1.5rem;
+        position: absolute;
+        left: auto;
+        right: 18rem;
+        top: 3.5rem;
+    }
+
+    main > div:first-child {
+        background-image: url(../img/blue-space-lg.webp);
+    }
+
+    .we-do {
+        display: flex;
+    }
+
+    .we-do > div {
+        width: 50%;
+    }
+
+    .we-do > div:nth-child(1) {
+        margin: auto;
+    }
+
+    footer > div:nth-child(1) > div {
+        width: 30%;
+        margin-bottom: 0rem;
+    }
+}
