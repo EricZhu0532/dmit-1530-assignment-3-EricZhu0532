@@ -1,0 +1,524 @@
+:root {
+    /** colours **/
+    --yellow:           #FED766; 
+    --lt-seafoam-green: #ecf9f6;
+    --seafoam-green:    #43C6AC;
+    --md-blue:          #191654;
+    --dk-blue:          #0C0B2A;
+    --blue-grey:        #6B717E;
+
+    /** typography **/
+    --headings:'Monoton', cursive;
+    --body: 'Rubik', sans-serif;
+}
+
+.sr-only {
+    position: absolute;
+    top: 0;
+    left: -9999999px;
+    width: 0.1rem;
+    height: 0.1rem;
+    visibility: hidden;
+}
+
+.caps {
+    text-transform: uppercase;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.toggle-btn {
+    align-self: center;
+    /* background-color: rebeccapurple;    */
+    margin-left: auto;
+    margin-right: 0%;
+}
+
+.toggle-btn:hover {
+    cursor: pointer;
+}
+  
+.toggle-btn svg {
+    width: 3rem;
+    /* background-color: red; */
+}
+
+.toggle-btn svg path {
+    fill: var(--md-blue);
+}
+
+nav {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.show-nav {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+}
+
+header {
+    position: sticky;
+    /* background-color: rebeccapurple; */
+    top: 0rem;
+}
+
+header > div{
+    box-shadow: 0rem 0.25rem 1rem 0.25rem rgba(0, 0, 0, 0.25);
+    padding: 1.5rem 0.75rem 1.75rem 0.75rem;
+    background-color: var(--lt-seafoam-green);
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header > div > a > img{
+    max-height: 3.5rem;
+    min-height: 3.5rem;
+    /* background-color: red; */
+}
+
+header nav {
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    background-color: var(--lt-seafoam-green);
+    /* background-color: red; */
+    padding: 1.75rem 0rem;
+}
+
+header li a {
+    font-family: var(--body);
+    /* background-color: rebeccapurple; */
+    font-size: 2rem;
+    font-weight: lighter;
+    text-decoration: none; 
+    align-self: center;
+    color: var(--md-blue);
+}
+
+header li a:hover {
+    color: var(--seafoam-green);
+}
+
+header li{
+    height: 4.75rem;
+    /* border: green 1px solid; */
+    display: flex;
+    padding: 0rem 0.75rem;
+}
+
+header li:nth-child(n+2) {
+    /* background-color: rebeccapurple; */
+    border-top: var(--seafoam-green) solid 2px;
+}
+
+header ul > li:last-of-type input{
+    /* background-color: red; */
+    border: 1px solid var(--dk-blue);
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 12px;
+    padding-left: 2.5rem;
+    /* background: var(--lt-seafoam-green) url("../img/svg/search-icon.svg") no-repeat; */
+    background-color: var(--lt-seafoam-green);
+    background-size: 1.5rem;
+    background-position:0.5rem center;
+    font-family: var(--body);
+    font-size: 1.5rem;
+    font-weight: 300;
+    /* color: red; */
+}
+
+.glass {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    left: 1.25rem;
+    top: 27.25rem;
+}
+
+.glass path{
+    fill: var(--dk-blue);
+    /* fill: red; */
+}
+
+::placeholder {
+    /* color: var(--dk-blue); */
+    color: #072448;
+    /* color: red; */
+    /* I don't know why but the PS doc says it's this colour instead of dk-blue */
+    opacity: 1; 
+  }
+
+header ul > li:last-of-type form {
+    align-self: center;
+    width: 100%;
+    height: 2.5rem;
+}
+
+/* --- */
+
+main > div:first-child{
+    background-color: red;
+    /* height: calc(100vh - 6.75rem); */
+    height: 100vh;
+    background: url(../img/blue-space-md.webp) center / cover no-repeat;
+    padding: 0rem 0.75rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* justify-content: space-evenly; */
+    justify-content: space-around;
+}
+
+.mono {
+    font-family: var(--headings);
+    /* color: red; */
+    font-weight: 200;
+    font-size: 3rem;
+    line-height: 4rem;
+}
+
+.bb {
+    border-bottom: 2px solid var(--seafoam-green);
+    /* background-color: red; */
+}
+
+main > div:first-child {
+    color: var(--lt-seafoam-green);
+}
+
+/* mark */
+main > div:first-child p,
+main > div:nth-child(2) p,
+.we-do > div:first-child p,
+.we-do > div:nth-child(2) p,
+footer p,
+footer a {
+    font-family: var(--body);
+    font-weight: lighter;
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+.together,
+.our-work {
+    border: 3px solid var(--seafoam-green);
+    border-radius: 5px;
+    margin-top: -7rem;
+}
+
+.together {
+    background-color: var(--seafoam-green);
+}
+
+.together > a {
+    color: var(--md-blue);
+}
+
+.our-work > a {
+    color: var(--seafoam-green);
+}
+
+.together:hover {
+    background-color: var(--lt-seafoam-green);
+    border: 3px solid var(--lt-seafoam-green);
+}
+
+.our-work:hover {
+    background-color: var(--seafoam-green);
+}
+
+.our-work:hover a {
+    color: var(--lt-seafoam-green);
+}
+
+.our-work {
+    margin-top: -9rem;
+}
+
+.button {
+    display: flex;
+    height: 4rem;
+}
+
+.button a {
+    margin: auto;
+    /* color: red; */
+    font-family: var(--body);
+    text-decoration: none;
+    font-size: 1.5rem;
+    line-height: 4rem;
+    font-weight: 400;
+}
+
+main > div:nth-child(2){
+    /* background-color: red; */
+    height: 17.5rem;
+    padding: 4rem 0.75rem 0rem 0.75rem;
+}
+
+main > div:nth-child(2) h2 {
+    max-width: 7.5ch;
+    white-space: nowrap;
+    margin-bottom: 1.5rem;
+}
+
+main > div:nth-child(2) p {
+    color: var(--dk-blue);
+    line-height: 1.5rem;
+}
+
+.card {
+    width: 18.75rem;
+    height: 18.75rem;
+    /* border: 1px solid red; */
+    margin: unset;
+    padding-top: 15rem;
+}
+
+.card-wrapper .card:first-child .card-banner {
+    background-color: var(--md-blue);
+}
+
+.card-wrapper .card:nth-child(2) .card-banner {
+    background-color: var(--seafoam-green);   
+}
+
+.card-wrapper .card:nth-child(2) .card-banner,
+.card-wrapper .card:first-child .card-banner {
+    height: 3.75rem;
+    padding: 0.5rem 1rem;
+    /* margin-top: 15rem; */
+}
+
+.card-banner h3 {
+    font-size: 0.75rem;
+    font-family: var(--body);
+    font-weight: normal;
+    color: var(--lt-seafoam-green);
+}
+
+.card-banner p {
+    font-size: 1rem;
+    font-family: var(--body);
+    font-weight: lighter;
+    color: var(--lt-seafoam-green);
+}
+
+.stack-of-cards .card-wrapper:nth-of-type(1) .card:nth-of-type(1){
+    background-color: red;
+    background-image: url(../img/creative-co-branding.jpeg);
+}
+
+.stack-of-cards .card-wrapper:nth-of-type(1) .card:nth-of-type(2){
+    background-color: red;
+    background-image: url(../img/digital-products-web-design.jpeg);
+}
+
+.stack-of-cards .card-wrapper:nth-of-type(2) .card:nth-of-type(1){
+    background-color: red;
+    background-image: url(../img/le-buzz-website-design.jpeg);
+}
+
+.stack-of-cards .card-wrapper:nth-of-type(2) .card:nth-of-type(2){
+    background-color: red;
+    background-image: url(../img/signmud-logo-design.jpeg);
+}
+
+.stack-of-cards .card-wrapper:nth-of-type(3) .card:nth-of-type(1){
+    background-color: red;
+    background-image: url(../img/binance-business-card-design.jpeg);
+}
+
+.stack-of-cards .card-wrapper:nth-of-type(3) .card:nth-of-type(2){
+    background-color: red;
+    background-image: url(../img/ga-photography-digital-marketing.jpeg);
+}
+
+.stack-of-cards .card-wrapper:nth-of-type(4) .card:nth-of-type(1){
+    background-color: red;
+    background-image: url(../img/digipool-app-design-and-dev.jpeg);
+}
+
+.stack-of-cards .card-wrapper:nth-of-type(4) .card:nth-of-type(2){
+    background-color: red;
+    background-image: url(../img/apollo-studios-prototyping.jpeg);
+}
+
+.stack-of-cards {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    height: 38rem;
+}
+
+main > div:nth-child(4) {
+    height: 12.5rem;
+    padding: 3rem 0.75rem;
+}
+
+.button-arrow {
+    display: flex;
+    height: 5rem;
+    border: 3px solid var(--md-blue);
+    border-radius: 5px;
+
+}
+
+.button-arrow a {
+    margin: auto;
+    /* color: red; */
+    font-family: var(--body);
+    text-decoration: none;
+    font-size: 1.5rem;
+    line-height: 5rem;
+    font-weight: 400;
+    color: var(--md-blue);
+}
+
+.button-arrow svg {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 1rem;
+    width: 2rem;
+}
+
+.button-arrow svg path {
+    fill: var(--md-blue);
+}
+
+.button-arrow:hover {
+    background-color: var(--md-blue);
+}
+
+.button-arrow:hover a {
+    color: var(--lt-seafoam-green);
+}
+
+.button-arrow:hover svg path {
+    fill: var(--lt-seafoam-green);
+}
+
+.we-do > div:first-child {
+    height: 30rem;
+    padding: 3rem 0.75rem;
+}
+
+.we-do > div:first-child h2 {
+    margin-bottom: 2rem;
+}
+
+.we-do > div:first-child p {
+    margin-bottom: 3rem;
+}
+
+.we-do > div:nth-child(2) div {
+    /* background-color: red; */
+    margin: 0.75rem;
+
+}
+
+.we-do > div:nth-child(2) img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.we-do > div:nth-child(2) h2 {
+    font-family: var(--body);
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 1rem 0;
+    color: var(--seafoam-green);
+}
+
+.we-do > div:nth-child(2) p {
+    margin-bottom: 2rem;
+}
+
+main > div:last-child {
+    background-color: red;
+    height: calc(100vh - 6.75rem);
+    /* height: 100vh; */
+    background: url(../img/contact-banner-sm.webp) center / cover no-repeat;
+    padding: 0rem 0.75rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 20%;
+}
+
+main > div:last-child h2 {
+    text-align: center;
+    color: var(--lt-seafoam-green);
+}
+
+main > div:last-child .button {
+        display: flex;
+        height: 4rem;
+        width: 18.75rem;
+        border-radius: 5px;
+        background-color: var(--md-blue);
+        margin: auto;
+}
+
+main > div:last-child .button a {
+    margin: auto;
+    color: var(--lt-seafoam-green);
+    font-family: var(--body);
+    text-decoration: none;
+    font-size: 1.5rem;
+    line-height: 4rem;
+    font-weight: 400;
+}
+
+footer > div:first-child {
+    background-color: var(--md-blue);
+    padding: 4rem 0.75rem 04rem 0.75rem;
+}
+
+footer p,
+footer > div:first-child h2,
+footer a {
+    color: var(--lt-seafoam-green);
+}
+
+footer > div:first-child a {
+    display: block;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--seafoam-green);
+}
+
+footer > div:first-child p {
+    line-height: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+footer > div:last-child {
+    background-color: var(--dk-blue);
+    padding: 0.75rem 0.75rem 0rem 0.75rem;
+}
+
